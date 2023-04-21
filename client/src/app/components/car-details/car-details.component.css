@@ -1,0 +1,25 @@
+.line {
+    height: 1px;
+    background-color: #B0BEC5;
+}
+
+@media screen and (max-width: 500px) {
+    .card1 {
+        padding-left: 26px;
+    }
+}
+.p1{
+    width: 42%;
+    margin-top: 1px;
+}
+.p2{
+    width: 58%;
+    margin-top: 1px;
+}
+i{
+    color: deepskyblue;
+}
+img{
+    border-radius: 5%;
+    height: 492px;
+}

@@ -1,0 +1,158 @@
+<nav class="navbar navbar-expand-lg " style="background-image:linear-gradient(90deg, rgb(4, 0, 71) 0%, rgba(42,174,215,1) 62%, rgba(51,199,230,1) 100%);">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="home"><h4><strong><i class="fa-solid fa-car"></i> CarRental</strong></h4></a>
+      
+    </div>
+  </nav>
+
+<section class="py-5 container">
+    <div class=" p-4 text-white" style="margin-left: 120px;">
+
+        <h1>{{carData.carName}}</h1>
+
+    </div>
+    <div class="  row ">
+        <div class="col-lg-6 col-md-6 align-items-center p-4">
+            <div id="carouselExampleRide" class="carousel slide  p-4 bg-light" data-bs-ride="true"
+                style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 5%;">
+                <div class="carousel-inner" style="width: fit-content;">
+                    <div class="carousel-item active ">
+                        <img src={{carData.img1}} class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src={{carData.img2}} class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src={{carData.img3}} class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <div class="col-lg-6 col-md-6 p-4">
+
+            <div class="bg-light container col-lg-6 col-md-12 p-4 text-dark "
+                style="font-family: sans-serif;font-weight: 700;width: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);border-radius: 5%;">
+
+
+
+                <p class="mt-4">OFFER</p>
+                <div class="" style=" display: flex;justify-content:space-between;align-items: center;">
+
+                    <span class="" style="font-size: x-large;">₹{{carData.payment}}/Day</span>
+
+
+                    <div>
+                        <!-- <button class="btn btn-outline-info " type="button" >
+                                    <i class="fa-solid fa-star"></i>
+                                </button> -->
+
+
+                        <button type="button" class="btn btn-outline-info btn-md"  (click)="rentCar()">
+                            Rent now
+                        </button>
+
+                        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Rent now
+                        </button>
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Enter details</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form  class="bg-white container p-5">
+                                            <input  type="text" class="form-control mt-3 p-2"  placeholder="id"          name="pin1" id="pid1">
+                                            <input  type="text" class="form-control mt-3 p-2"  placeholder="name"        name="pin2" id="pid2">
+                                            <input  type="text" class="form-control mt-3 p-2"  placeholder="category id" name="pin3" id="pid3">
+                                            <input  type="text" class="form-control mt-3 p-2"  placeholder="description" name="pin4" id="pid4">
+                                            <input  type="text" class="form-control mt-3 p-2"  placeholder="price"       name="pin5" id="pid5">
+                                            
+                                        </form >
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" (click)="rentCar()">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+                <p class="mt-4">CAR DETAILS</p>
+                <div style="margin-left: 18px;">
+                    <div style="display: flex;">
+                        <p class="ml-auto " style="width:50% ;"><i class="fa-solid fa-user-group"></i>
+                            {{carData.carCapacity}}</p>
+                        <p class="ml-auto " style="width:50% ;"><i class="fa-solid fa-gas-pump"></i> {{carData.fuel}}
+                        </p>
+                    </div>
+                    <div style="display: flex;">
+                        <p class="ml-auto " style="width:50% ;"><i class="fa-solid fa-gauge"></i> {{carData.mileage}}
+                        </p>
+                        <p class="ml-auto " style="width:50% ;"><i class="fa-solid fa-gear"></i>
+                            {{carData.transmission}}</p>
+
+                    </div>
+                </div>
+
+                <div style="border: 2px solid rgba(128, 128, 128, 0.438);border-radius: 15px;">
+                    <div class="row px-3 mt-2">
+                        <p class="light-text p1">Rating</p>
+                        <p class="ml-auto p2" id="v1">: {{carData.rating}}</p>
+                    </div>
+                    <div class="line mt-3"></div>
+                    <div class="row px-3 mt-2">
+                        <p class="light-text p1">Renting company</p>
+                        <p class="ml-auto p2" id="h1">: {{carData.rentingCompany}}</p>
+                    </div>
+                    <div class="line mt-3"></div>
+                    <div class="row px-3 mt-2">
+                        <p class="light-text p1">Available</p>
+                        <p class="ml-auto p2" id="w1">: {{carData.available}}</p>
+                    </div>
+                    <div class="line mt-3"></div>
+                    <div class="row px-3 mt-2">
+                        <p class="light-text p1">contact</p>
+                        <p class="ml-auto p2" id="p1">: {{carData.contact}}</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</section>

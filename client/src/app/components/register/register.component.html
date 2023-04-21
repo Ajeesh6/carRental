@@ -1,0 +1,27 @@
+<div class="wrapper fadeInDown" style="margin-top: 100px;">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Sign up </h2>
+      
+ 
+      <!-- Login Form -->
+      <form [formGroup]="registerFrom" action="" (ngSubmit)="register()">
+        <input formControlName="uname" type="text" id="login" class="fadeIn second" name="login" placeholder="username">
+        <div *ngIf="this.registerFrom.get('uname')?.errors && this.registerFrom.get('uname')?.touched">
+          <p class="text-danger">accepts only characters</p>
+      </div>
+        <input formControlName="email" type="text" id="email" class="fadeIn second" name="email" placeholder="email">
+        <div *ngIf="this.registerFrom.get('email')?.errors && this.registerFrom.get('email')?.touched">
+          <p class="text-danger">enter vaild email</p>
+      </div>
+        <input formControlName="psw" type="password" id="password" class="fadeIn third" name="pass" placeholder="password">
+        <div *ngIf="this.registerFrom.get('psw')?.errors && this.registerFrom.get('psw')?.touched">
+          <p class="text-danger">accepts only numbers and characters</p>
+      </div>
+        <input  type="submit" class="fadeIn fourth" value="register">
+      </form>
+  
+      
+  
+    </div>
+  </div>

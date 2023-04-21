@@ -1,0 +1,18 @@
+span{
+    font-weight: 800;
+    font-size: large;
+}
+section{
+    background-image:linear-gradient(90deg, rgb(4, 0, 71) 0%, rgba(42,174,215,1) 62%, rgba(51,199,230,1) 100%);
+}
+.btnn{
+    background-color: white;
+    color: skyblue;
+    border: 2px solid skyblue;
+    border-radius: 8px;
+    height: 35px;
+}
+.btnn:hover{
+    background-color: skyblue;
+    color: white;
+}

@@ -1,0 +1,28 @@
+<div class="wrapper fadeInDown " style="margin-top: 100px;">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Sign In </h2>
+      
+  
+    
+  
+      <!-- Login Form -->
+      <form [formGroup]="loginForm" action="" (ngSubmit)="login()">
+        <input formControlName="email" type="text" id="email" class="fadeIn second" name="email" placeholder="email">
+        <div *ngIf="this.loginForm.get('email')?.errors && this.loginForm.get('email')?.touched">
+          <p class="text-danger">enter valid email</p>
+      </div>
+        <input formControlName="psw" type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+        <div *ngIf="this.loginForm.get('psw')?.errors && this.loginForm.get('psw')?.touched">
+          <p class="text-danger">accepts only numbers and characters</p>
+      </div>
+        <input  type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <div>don't have an account? <a class="underlineHover" routerLink="register"> sign up</a></div>
+      </div>
+  
+    </div>
+  </div>
